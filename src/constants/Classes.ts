@@ -16,4 +16,4 @@ const CLASSES = {
     SUBMIT_INPUT: ['button'],
 }
 
-export { CLASSES, PREFIXES } // @todo re-assign values globally
+export { CLASSES, PREFIXES }
