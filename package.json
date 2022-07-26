@@ -8,7 +8,7 @@
       "url": "git+https://github.com/phpfyi/vue-page-components.git"
     },
     "keywords": [
-      "vue",
+      "vue"
     ],
     "author": "Andrew Mc Cormack",
     "license": "ISC",
