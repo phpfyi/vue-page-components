@@ -1,10 +1,10 @@
 import { App } from 'vue'
 
-import BaseImage from 'vue-page-components/src/components/src/Image/BaseImage.vue'
-import BaseIntersectionImage from 'vue-page-components/src/components/src/Image/BaseIntersectionImage.vue'
+import BaseImage from './components/Image/BaseImage.vue'
+import BaseIntersectionImage from './components/Image/BaseIntersectionImage.vue'
 
-import BaseExternalLink from 'vue-page-components/src/components/Link/BaseExternalLink.vue'
-import BaseLink from 'vue-page-components/src/components/Link/BaseLink.vue'
+import BaseExternalLink from './components/Link/BaseExternalLink.vue'
+import BaseLink from './components/Link/BaseLink.vue'
 
 const plugin = {
   install (app: App) {
