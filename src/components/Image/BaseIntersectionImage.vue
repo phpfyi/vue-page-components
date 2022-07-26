@@ -17,9 +17,7 @@ const image: Ref<Element | null> = ref(null)
 const { intersected } = useIntersectionObserver(image)
 
 // computed
-const imageSrc = computed(() => {
-    return intersected.value ? props.src : ''
-})
+const imageSrc = computed(() =>  intersected.value ? props.src : '')
 const attributes = computed(() => {
     return {
         height: props.height || props.size,

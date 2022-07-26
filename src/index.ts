@@ -1,5 +1,8 @@
 import { App } from 'vue'
 
+import BaseHeading from './components/Font/BaseHeading.vue'
+import BaseText from './components/Font/BaseText.vue'
+
 import BaseImage from './components/Image/BaseImage.vue'
 import BaseIntersectionImage from './components/Image/BaseIntersectionImage.vue'
 
@@ -27,6 +30,9 @@ const plugin = {
       }
     }
     */
+    app.component('BaseHeading', BaseHeading)
+    app.component('BaseText', BaseText)
+
     app.component('BaseImage', BaseImage)
     app.component('BaseIntersectionImage', BaseIntersectionImage)
 
