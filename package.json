@@ -1,0 +1,20 @@
+{
+    "name": "vue-page-components",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/phpfyi/vue-page-components.git"
+    },
+    "keywords": [
+      "vue",
+    ],
+    "author": "Andrew Mc Cormack",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/phpfyi/vue-page-components/issues"
+    },
+    "homepage": "https://github.com/phpfyi/vue-page-components#readme"
+  }
+  
