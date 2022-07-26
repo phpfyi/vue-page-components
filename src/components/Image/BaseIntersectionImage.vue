@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useIntersectionObserver } from '@/compositions/useIntersectionObserver'
+import { useIntersectionObserver } from '../../compositions/useIntersectionObserver'
 import { computed, ref, Ref } from 'vue'
 
 // props
