@@ -1,20 +1,37 @@
 {
-    "name": "vue-page-components",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/phpfyi/vue-page-components.git"
-    },
-    "keywords": [
-      "vue"
-    ],
-    "author": "Andrew Mc Cormack",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/phpfyi/vue-page-components/issues"
-    },
-    "homepage": "https://github.com/phpfyi/vue-page-components#readme"
+  "name": "vue-page-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phpfyi/vue-page-components.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Andrew Mc Cormack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phpfyi/vue-page-components/issues"
+  },
+  "homepage": "https://github.com/phpfyi/vue-page-components#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@types/node": "^18.6.1",
+    "@vue/compiler-sfc": "^3.2.37",
+    "@vue/runtime-dom": "^3.2.37",
+    "rollup": "^2.77.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.21"
+  },
+  "scripts": {
+    "build": "rollup -c"
   }
-  
+}

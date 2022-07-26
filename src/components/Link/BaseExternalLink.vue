@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CLASSES } from '../constants/Classes'
+import { CLASSES } from '../../constants/Classes'
 
 // props
 withDefaults(
