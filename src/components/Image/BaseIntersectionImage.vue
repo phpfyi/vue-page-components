@@ -30,5 +30,5 @@ onUnmounted(() => unobserve())
 </script>
 
 <template>
-    <img ref="image" class="app-image block" v-bind="attributes" :src="imageSrc" />
+    <img ref="image" class="app-image block" :class="{ intersected }" v-bind="attributes" :src="imageSrc" />
 </template>

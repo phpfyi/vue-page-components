@@ -9,14 +9,13 @@ export function useIntersectionObserver(element: Ref<Element | null>) {
             const element: IntersectionObserverEntry = entries[0]
             if (element.isIntersecting) {
                 intersected.value = true
-                observer.value?.disconnect()
+                unobserve()
             }
         })
         observer.value.observe(element.value as Element) // @todo test
     }
-    const unobserve = () => {
-        observer.value?.disconnect()
-    }
+    const unobserve = () => observer.value?.disconnect()
+    
     return {
         intersected,
         observe,
