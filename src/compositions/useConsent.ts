@@ -7,12 +7,19 @@ export const SETTINGS_COOKIE = 'phpfyi_settings'
 export function useConsent() {
     const { getCookie, setCookie } = useCookie()
 
-    const consentLogged = ref(false)
+    const consentLogged = ref(true)
     let consent: Consent.Cookie = reactive({
         preferences: false,
         marketing: false,
         statistics: false,
     })
+    const bootConsent = () => {
+        const cookie: Consent.Cookie | null = getConsentCookie()
+
+        cookie 
+            ? (consent = reactive(cookie)) 
+            : (consentLogged.value = false)
+    }
     const getConsentCookie = (): Consent.Cookie | null => {
         const cookie = String(getCookie(SETTINGS_COOKIE))
 
@@ -20,14 +27,6 @@ export function useConsent() {
     }
     const setConsentCookie = (consent: Consent.Cookie | null) => {
         setCookie(SETTINGS_COOKIE, JSON.stringify(consent))
-    }
-    const bootConsent = () => {
-        const cookie: Consent.Cookie | null = getConsentCookie()
-
-        if (cookie) {
-            consent = reactive(cookie)
-            consentLogged.value = true
-        }
     }
     return {
         consent,
