@@ -27,6 +27,7 @@ export function useConsent() {
     }
     const setConsentCookie = (consent: Consent.Cookie | null) => {
         setCookie(SETTINGS_COOKIE, JSON.stringify(consent))
+        consentLogged.value = true
     }
     return {
         consent,
