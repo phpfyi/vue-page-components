@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useFormInput } from '../../compositions/useFormInput'
-import { CLASSES } from 'vue-page-components/src/constants/Classes'
+import { CLASSES } from '../../constants/Classes'
 
 // props
 const props = withDefaults(
