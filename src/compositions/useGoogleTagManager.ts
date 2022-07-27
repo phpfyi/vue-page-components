@@ -1,6 +1,10 @@
 export function useGoogleTagManager() {
-    const bootGoogleTagManager = () => window.dataLayer = window.dataLayer || []
-
+    const bootGoogleTagManager = () => {
+        window.dataLayer = window.dataLayer || []
+    }
+    const pushData = (data: Record<string,unknown>): void => {
+        window.dataLayer.push(data)
+    }
     const trackPage = (path: string, title: string): void => {
         window.dataLayer.push({
             event: 'PageView',
@@ -8,12 +12,9 @@ export function useGoogleTagManager() {
             page_title: title,
         })
     }
-    const pushData = (data: Record<string,unknown>): void => {
-        window.dataLayer.push(data)
-    }
     return {
         bootGoogleTagManager,
+        pushData,
         trackPage,
-        pushData
     }
 }
