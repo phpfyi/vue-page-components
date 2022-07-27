@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useIntersectionObserver } from '../../compositions/useIntersectionObserver'
-import { computed, ref, Ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref, Ref } from 'vue'
 
 // props
 const props = defineProps<{
@@ -14,7 +14,7 @@ const props = defineProps<{
 const image: Ref<Element | null> = ref(null)
 
 // compositions
-const { intersected } = useIntersectionObserver(image)
+const { intersected, observe, unobserve } = useIntersectionObserver(image)
 
 // computed
 const imageSrc = computed(() =>  intersected.value ? props.src : '')
@@ -24,6 +24,9 @@ const attributes = computed(() => {
         width: props.width || props.size,
     }
 })
+// hooks
+onMounted(() => observe())
+onUnmounted(() => unobserve())
 </script>
 
 <template>

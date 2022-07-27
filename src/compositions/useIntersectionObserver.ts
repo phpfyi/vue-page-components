@@ -1,10 +1,10 @@
-import { onMounted, onUnmounted, ref, Ref } from 'vue'
+import { ref, Ref } from 'vue'
 
 export function useIntersectionObserver(element: Ref<Element | null>) {
     const observer: Ref<IntersectionObserver | null> = ref(null)
     const intersected: Ref<boolean> = ref(false)
 
-    onMounted(() => {
+    const observe = () => {
         observer.value = new IntersectionObserver((entries) => {
             const element: IntersectionObserverEntry = entries[0]
             if (element.isIntersecting) {
@@ -13,11 +13,13 @@ export function useIntersectionObserver(element: Ref<Element | null>) {
             }
         })
         observer.value.observe(element.value as Element) // @todo test
-    })
-    onUnmounted(() => {
+    }
+    const unobserve = () => {
         observer.value?.disconnect()
-    })
+    }
     return {
         intersected,
+        observe,
+        unobserve
     }
 }

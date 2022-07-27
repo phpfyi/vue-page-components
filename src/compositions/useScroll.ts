@@ -4,10 +4,7 @@ export function useScroll() {
     // data
     const scrolled: Ref<boolean> = ref(false)
 
-    // hooks
-    onMounted(() => {
-        window.addEventListener('scroll', onScroll)
-    })
+    const bootScroll = () => window.addEventListener('scroll', onScroll)
     
     // functions
     const onScroll = (): void => {
@@ -46,6 +43,7 @@ export function useScroll() {
     }
     return {
         scrolled,
+        bootScroll,
         scrollTo,
         scrollToElement,
         scrollIntoView,
