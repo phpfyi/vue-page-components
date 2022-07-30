@@ -2,37 +2,28 @@ import { reactive, ref } from 'vue'
 import * as Consent from '../types/Consent'
 import { useCookie } from '../compositions/useCookie'
 
-export const SETTINGS_COOKIE = 'phpfyi_settings'
-
-export function useConsent() {
+export function useConsent(id: string = 'app_settings') {
     const { getCookie, setCookie } = useCookie()
 
-    let consent: Consent.Cookie = reactive({
+    const consentCookie = ref<Consent.Cookie | null>(null)
+ 
+    const createConsent = (): Consent.Cookie => reactive({
         preferences: false,
         marketing: false,
         statistics: false,
     })
-    const consentLogged = ref(true)
-    const bootConsent = () => {
-        const cookie: Consent.Cookie | null = getConsentCookie()
-
-        cookie 
-            ? (consent = reactive(cookie)) 
-            : (consentLogged.value = false)
-    }
     const getConsentCookie = (): Consent.Cookie | null => {
-        const cookie = String(getCookie(SETTINGS_COOKIE))
+        const cookie = String(getCookie(id))
 
-        return cookie ? JSON.parse(cookie) : null
+        return consentCookie.value = cookie ? JSON.parse(cookie) : null
     }
     const setConsentCookie = (consent: Consent.Cookie | null) => {
-        setCookie(SETTINGS_COOKIE, JSON.stringify(consent))
-        consentLogged.value = true
+        setCookie(id, JSON.stringify(consent))
+        consentCookie.value = consent
     }
     return {
-        consent,
-        consentLogged,
-        bootConsent,
+        consentCookie,
+        createConsent,
         getConsentCookie,
         setConsentCookie,
     }

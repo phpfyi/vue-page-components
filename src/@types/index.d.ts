@@ -25,10 +25,9 @@ export const BaseIntersectionImage: VueConstructor
 export const BaseExternalLink: VueConstructor
 export const BaseLink: VueConstructor
 
-export const useConsent: () => {
-    consent: import("../types/Consent").Cookie,
-    consentLogged: Ref<boolean>,
-    bootConsent: () => void,
+export const useConsent: (id: string) => {
+    consentCookie: import("../types/Consent").Cookie | null
+    createConsent: () => import("../types/Consent").Cookie,
     getConsentCookie: () => import("../types/Consent").Cookie | null,
     setConsentCookie: (consent: import("../types/Consent").Cookie | null) => void,
 }
