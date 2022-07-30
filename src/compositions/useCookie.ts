@@ -1,4 +1,5 @@
 export function useCookie() {
+    const getCookie = (name: string): string | null => parseCookie(name, document.cookie)
     const setCookie = (name: string, value: string, days = 30): void => {
         let expires = ''
         if (days) {
@@ -8,9 +9,9 @@ export function useCookie() {
         }
         document.cookie = name + '=' + (value || '') + expires + '; path=/'
     }
-    const getCookie = (name: string): null | string => {
+    const parseCookie = (name: string, value: string): string | null => {
         const nameEQ = `${name}=`
-        const cookies = document.cookie.split(';')
+        const cookies = value.split(';')
         for (let i = 0; i < cookies.length; i++) {
             let cookie = cookies[i]
             while (cookie.charAt(0) == ' ') cookie = cookie.substring(1, cookie.length)

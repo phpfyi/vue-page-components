@@ -33,8 +33,9 @@ export const useConsent: (id: string) => {
 }
 
 export const useCookie: () => {
-    setCookie: (name: string, value: string, days: number) => void,
     getCookie: (name: string) => null | string,
+    setCookie: (name: string, value: string, days: number) => void,
+    parseCookie: (name: string, value: string) => string | null
     deleteCookie: (name: string) => void
 }
 
