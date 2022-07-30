@@ -10,7 +10,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'lib/main.ts'),
       name: 'Vue Page Components',
       // the proper extensions will be added
-      fileName: 'vue-page-components'
+      fileName: 'main'
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
