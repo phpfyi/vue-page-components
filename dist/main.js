@@ -1,5 +1,5 @@
-import { defineComponent as m, computed as p, openBlock as r, createElementBlock as u, normalizeStyle as L, unref as n, renderSlot as k, createElementVNode as g, normalizeClass as c, createBlock as S, Transition as G, withCtx as q, resolveDynamicComponent as O, createTextVNode as w, toDisplayString as v, resolveComponent as y, createCommentVNode as $, createVNode as b, Fragment as A, renderList as R, mergeProps as D, ref as C, onMounted as X, onUnmounted as Y, reactive as P, nextTick as M } from "vue";
-const we = /* @__PURE__ */ m({
+import { defineComponent as m, computed as p, openBlock as r, createElementBlock as u, normalizeStyle as L, unref as n, renderSlot as k, createElementVNode as g, normalizeClass as c, createBlock as S, Transition as D, withCtx as q, resolveDynamicComponent as F, createTextVNode as w, toDisplayString as v, resolveComponent as y, createCommentVNode as T, createVNode as I, Fragment as U, renderList as O, mergeProps as A, ref as B, onMounted as z, onUnmounted as G, reactive as X, nextTick as P } from "vue";
+const qe = /* @__PURE__ */ m({
   __name: "PerspectivePlane",
   props: {
     rotateX: { default: "0deg" },
@@ -22,7 +22,7 @@ const we = /* @__PURE__ */ m({
       k(a.$slots, "default")
     ], 4));
   }
-}), H = { class: "perspective" }, Le = /* @__PURE__ */ m({
+}), Y = { class: "perspective" }, we = /* @__PURE__ */ m({
   __name: "PerspectiveWrapper",
   props: {
     size: { default: "0px" }
@@ -32,7 +32,7 @@ const we = /* @__PURE__ */ m({
       height: t.size,
       width: t.size
     }));
-    return (a, s) => (r(), u("div", H, [
+    return (a, s) => (r(), u("div", Y, [
       g("div", {
         class: "perspective__inner",
         style: L(n(l))
@@ -41,7 +41,7 @@ const we = /* @__PURE__ */ m({
       ], 4)
     ]));
   }
-}), Ve = /* @__PURE__ */ m({
+}), Le = /* @__PURE__ */ m({
   __name: "SlantWrapper",
   props: {
     height: null,
@@ -60,28 +60,29 @@ const we = /* @__PURE__ */ m({
       style: L(n(l))
     }, null, 6));
   }
-}), K = (e, t) => {
+});
+const H = (e, t) => {
   const l = e.__vccOpts || e;
   for (const [a, s] of t)
     l[a] = s;
   return l;
-}, W = {};
-function J(e, t) {
-  return r(), S(G, {
+}, K = {};
+function W(e, t) {
+  return r(), S(D, {
     name: "fade",
     mode: "out-in"
   }, {
     default: q(() => [
-      k(e.$slots, "default")
+      k(e.$slots, "default", {}, void 0, !0)
     ]),
     _: 3
   });
 }
-const Pe = /* @__PURE__ */ K(W, [["render", J]]), N = {
+const Ve = /* @__PURE__ */ H(K, [["render", W], ["__scopeId", "data-v-51fc47aa"]]), N = {
   INPUT_ELEMENT: "form-element",
   INPUT: "input",
   HEADING: "h"
-}, T = {
+}, $ = {
   BASE_HEADING: ["app-heading"],
   BASE_TEXT: ["app-text"],
   BASE_LINK: ["app-link"],
@@ -91,15 +92,15 @@ const Pe = /* @__PURE__ */ K(W, [["render", J]]), N = {
   INPUT: ["input"],
   INPUT_ERROR: ["input-error"],
   SUBMIT_INPUT: ["button"]
-}, Me = /* @__PURE__ */ m({
+}, Pe = /* @__PURE__ */ m({
   __name: "BaseHeading",
   props: {
     size: null,
     text: { default: void 0 }
   },
   setup(e) {
-    const t = e, l = p(() => [...T.BASE_HEADING, a.value]), a = p(() => `${N.HEADING}${t.size}`);
-    return (s, i) => (r(), S(O(n(a)), {
+    const t = e, l = p(() => [...$.BASE_HEADING, a.value]), a = p(() => `${N.HEADING}${t.size}`);
+    return (s, i) => (r(), S(F(n(a)), {
       class: c(n(l))
     }, {
       default: q(() => [
@@ -110,15 +111,15 @@ const Pe = /* @__PURE__ */ K(W, [["render", J]]), N = {
       _: 3
     }, 8, ["class"]));
   }
-}), Ue = /* @__PURE__ */ m({
+}), Me = /* @__PURE__ */ m({
   __name: "BaseText",
   props: {
     tag: { default: "p" },
     text: { default: void 0 }
   },
   setup(e) {
-    const t = p(() => T.BASE_TEXT);
-    return (l, a) => (r(), S(O(e.tag), {
+    const t = p(() => $.BASE_TEXT);
+    return (l, a) => (r(), S(F(e.tag), {
       class: c(n(t))
     }, {
       default: q(() => [
@@ -130,13 +131,13 @@ const Pe = /* @__PURE__ */ K(W, [["render", J]]), N = {
     }, 8, ["class"]));
   }
 });
-function B(e) {
+function C(e) {
   const t = p(() => e.name ? `${N.INPUT_ELEMENT}-${e.name}` : ""), l = p(() => e.id ? e.id : e.name ? `${N.INPUT}-${e.name}` : ""), a = p(
-    () => T.INPUT_ELEMENT.concat([`${T.INPUT_ELEMENT}-${e.type}`])
-  ), s = p(() => T.INPUT_INNER), i = p(() => [
-    ...T.INPUT,
+    () => $.INPUT_ELEMENT.concat([`${$.INPUT_ELEMENT}-${e.type}`])
+  ), s = p(() => $.INPUT_INNER), i = p(() => [
+    ...$.INPUT,
     ...e.type ? [`${N.INPUT}-${e.type}`] : [],
-    ...(e.messages || []).length > 0 ? T.INPUT_ERROR : []
+    ...(e.messages || []).length > 0 ? $.INPUT_ERROR : []
   ]), d = p(() => e.label !== !1 ? e.label ? String(e.label) : (e.name.charAt(0).toUpperCase() + e.name.slice(1)).replace("_", " ") : e.label);
   return {
     elementId: t,
@@ -147,10 +148,10 @@ function B(e) {
     labelText: d
   };
 }
-const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
+const J = ["id"], Z = ["for"], j = { class: "label-content" }, Q = {
   key: 0,
   class: "required"
-}, te = ["id", "type", "name", "required", "readonly", "checked"], ne = /* @__PURE__ */ g("span", { class: "switch" }, null, -1), ae = /* @__PURE__ */ g("div", { class: "cl" }, null, -1), Fe = /* @__PURE__ */ m({
+}, ee = ["id", "type", "name", "required", "readonly", "checked"], te = /* @__PURE__ */ g("span", { class: "switch" }, null, -1), ne = /* @__PURE__ */ g("div", { class: "cl" }, null, -1), Fe = /* @__PURE__ */ m({
   __name: "CheckboxInput",
   props: {
     type: { default: "checkbox" },
@@ -165,9 +166,9 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = B(l), I = (f) => t("update:modelValue", Boolean(f.target.checked));
+    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = C(l), _ = (f) => t("update:modelValue", Boolean(f.target.checked));
     return (f, x) => {
-      const _ = y("FormMessages");
+      const b = y("FormMessages");
       return r(), u("div", {
         id: n(a),
         class: c(n(i))
@@ -179,8 +180,8 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
             key: 0,
             for: n(s)
           }, [
-            g("span", Q, v(n(h)), 1),
-            e.required ? (r(), u("span", ee, " *")) : $("", !0),
+            g("span", j, v(n(h)), 1),
+            e.required ? (r(), u("span", Q, " *")) : T("", !0),
             g("input", {
               id: n(s),
               type: e.type,
@@ -189,17 +190,17 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
               required: e.required,
               readonly: e.readonly,
               checked: e.modelValue,
-              onInput: I
-            }, null, 42, te),
-            ne,
-            ae
-          ], 8, j)) : $("", !0),
-          b(_, { messages: e.messages }, null, 8, ["messages"])
+              onInput: _
+            }, null, 42, ee),
+            te,
+            ne
+          ], 8, Z)) : T("", !0),
+          I(b, { messages: e.messages }, null, 8, ["messages"])
         ], 2)
-      ], 10, Z);
+      ], 10, J);
     };
   }
-}), se = ["id"], le = ["id", "type", "name", "placeholder", "readonly", "required", "value"], oe = { key: 0 }, Oe = /* @__PURE__ */ m({
+}), ae = ["id"], se = ["id", "type", "name", "placeholder", "readonly", "required", "value"], le = { key: 0 }, Ue = /* @__PURE__ */ m({
   __name: "EmailInput",
   props: {
     type: { default: "email" },
@@ -215,14 +216,14 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = B(l), I = (f) => t("update:modelValue", f.target.value);
+    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = C(l), _ = (f) => t("update:modelValue", f.target.value);
     return (f, x) => {
-      const _ = y("InputLabel"), E = y("FormMessages");
+      const b = y("InputLabel"), E = y("FormMessages");
       return r(), u("div", {
         id: n(a),
         class: c(n(i))
       }, [
-        b(_, {
+        I(b, {
           id: n(s),
           label: n(h),
           required: e.required
@@ -239,15 +240,15 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
             readonly: e.readonly,
             required: e.required,
             value: e.modelValue,
-            onInput: I
-          }, null, 42, le),
-          e.description ? (r(), u("i", oe, v(e.description), 1)) : $("", !0),
-          b(E, { messages: e.messages }, null, 8, ["messages"])
+            onInput: _
+          }, null, 42, se),
+          e.description ? (r(), u("i", le, v(e.description), 1)) : T("", !0),
+          I(E, { messages: e.messages }, null, 8, ["messages"])
         ], 2)
-      ], 10, se);
+      ], 10, ae);
     };
   }
-}), ie = ["id", "name", "action", "method", "novalidate"], Ae = /* @__PURE__ */ m({
+}), oe = ["id", "name", "action", "method", "novalidate"], Oe = /* @__PURE__ */ m({
   __name: "FormBase",
   props: {
     id: { default: void 0 },
@@ -275,28 +276,28 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
         novalidate: e.novalidate,
         onSubmit: a
       }, [
-        b(d, { messages: e.messages }, null, 8, ["messages"]),
+        I(d, { messages: e.messages }, null, 8, ["messages"]),
         k(s.$slots, "default")
-      ], 40, ie);
+      ], 40, oe);
     };
   }
-}), de = {
+}), ie = {
   key: 0,
   class: "form-messages input-error"
-}, Re = /* @__PURE__ */ m({
+}, Ae = /* @__PURE__ */ m({
   __name: "FormMessages",
   props: {
     messages: { default: () => [] }
   },
   setup(e) {
-    return (t, l) => e.messages.length ? (r(), u("div", de, [
-      (r(!0), u(A, null, R(e.messages, (a, s) => (r(), u("span", { key: s }, v(a), 1))), 128))
-    ])) : $("", !0);
+    return (t, l) => e.messages.length ? (r(), u("div", ie, [
+      (r(!0), u(U, null, O(e.messages, (a, s) => (r(), u("span", { key: s }, v(a), 1))), 128))
+    ])) : T("", !0);
   }
-}), re = ["for"], ue = { class: "label-content" }, ce = {
+}), de = ["for"], re = { class: "label-content" }, ue = {
   key: 0,
   class: "required"
-}, De = /* @__PURE__ */ m({
+}, Re = /* @__PURE__ */ m({
   __name: "InputLabel",
   props: {
     label: { type: [String, Boolean] },
@@ -308,11 +309,11 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
       key: 0,
       for: e.id
     }, [
-      g("span", ue, v(e.label), 1),
-      e.required ? (r(), u("span", ce, " *")) : $("", !0)
-    ], 8, re)) : $("", !0);
+      g("span", re, v(e.label), 1),
+      e.required ? (r(), u("span", ue, " *")) : T("", !0)
+    ], 8, de)) : T("", !0);
   }
-}), me = ["id"], fe = ["id", "type", "name", "placeholder", "readonly", "required", "value"], pe = { key: 0 }, ze = /* @__PURE__ */ m({
+}), ce = ["id"], me = ["id", "type", "name", "placeholder", "readonly", "required", "value"], fe = { key: 0 }, De = /* @__PURE__ */ m({
   __name: "PhoneNumberInput",
   props: {
     type: { default: "tel" },
@@ -328,14 +329,14 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = B(l), I = (f) => t("update:modelValue", f.target.value);
+    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = C(l), _ = (f) => t("update:modelValue", f.target.value);
     return (f, x) => {
-      const _ = y("InputLabel"), E = y("FormMessages");
+      const b = y("InputLabel"), E = y("FormMessages");
       return r(), u("div", {
         id: n(a),
         class: c(n(i))
       }, [
-        b(_, {
+        I(b, {
           id: n(s),
           label: n(h),
           required: e.required
@@ -352,19 +353,19 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
             readonly: e.readonly,
             required: e.required,
             value: e.modelValue,
-            onInput: I
-          }, null, 42, fe),
-          e.description ? (r(), u("i", pe, v(e.description), 1)) : $("", !0),
-          b(E, { messages: e.messages }, null, 8, ["messages"])
+            onInput: _
+          }, null, 42, me),
+          e.description ? (r(), u("i", fe, v(e.description), 1)) : T("", !0),
+          I(E, { messages: e.messages }, null, 8, ["messages"])
         ], 2)
-      ], 10, me);
+      ], 10, ce);
     };
   }
-}), ge = ["id"], he = ["id", "value", "name", "required", "readonly"], ve = {
+}), pe = ["id"], ge = ["id", "value", "name", "required", "readonly"], he = {
   key: 0,
   disabled: "",
   value: ""
-}, ye = ["value"], Ge = /* @__PURE__ */ m({
+}, ve = ["value"], ze = /* @__PURE__ */ m({
   __name: "SelectInput",
   props: {
     type: { default: "select" },
@@ -382,14 +383,14 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = B(l), I = (f) => t("update:modelValue", f.target.value);
+    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = C(l), _ = (f) => t("update:modelValue", f.target.value);
     return (f, x) => {
-      const _ = y("InputLabel"), E = y("FormMessages");
+      const b = y("InputLabel"), E = y("FormMessages");
       return r(), u("div", {
         id: n(a),
         class: c(n(i))
       }, [
-        b(_, {
+        I(b, {
           id: n(s),
           label: n(h),
           required: e.required
@@ -404,20 +405,20 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
             class: c(n(o)),
             required: e.required,
             readonly: e.readonly,
-            onInput: I
+            onInput: _
           }, [
-            e.emptyOption ? (r(), u("option", ve, v(e.emptyOption), 1)) : $("", !0),
-            (r(!0), u(A, null, R(e.options, (V, z) => (r(), u("option", {
-              key: z,
+            e.emptyOption ? (r(), u("option", he, v(e.emptyOption), 1)) : T("", !0),
+            (r(!0), u(U, null, O(e.options, (V, R) => (r(), u("option", {
+              key: R,
               value: V.value
-            }, v(V.title), 9, ye))), 128))
-          ], 42, he),
-          b(E, { messages: e.messages }, null, 8, ["messages"])
+            }, v(V.title), 9, ve))), 128))
+          ], 42, ge),
+          I(E, { messages: e.messages }, null, 8, ["messages"])
         ], 2)
-      ], 10, ge);
+      ], 10, pe);
     };
   }
-}), Ie = ["id", "type", "name", "value", "disabled"], Xe = /* @__PURE__ */ m({
+}), ye = ["id", "type", "name", "value", "disabled"], Ge = /* @__PURE__ */ m({
   __name: "SubmitInput",
   props: {
     type: { default: "submit" },
@@ -427,7 +428,7 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
     modelValue: { type: [String, Number, Boolean, Array], default: "Submit" }
   },
   setup(e) {
-    const t = e, { inputId: l } = B(t), a = p(() => T.SUBMIT_INPUT);
+    const t = e, { inputId: l } = C(t), a = p(() => $.SUBMIT_INPUT);
     return (s, i) => (r(), u("input", {
       id: n(l),
       type: e.type,
@@ -435,9 +436,9 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
       value: e.modelValue,
       class: c(n(a)),
       disabled: e.disabled
-    }, null, 10, Ie));
+    }, null, 10, ye));
   }
-}), be = ["id"], _e = ["id", "name", "rows", "value", "placeholder", "required", "readonly"], Te = { key: 0 }, Ye = /* @__PURE__ */ m({
+}), _e = ["id"], Ie = ["id", "name", "rows", "value", "placeholder", "required", "readonly"], be = { key: 0 }, Xe = /* @__PURE__ */ m({
   __name: "TextareaInput",
   props: {
     type: { default: "textarea" },
@@ -454,14 +455,14 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = B(l), I = (f) => t("update:modelValue", f.target.value);
+    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = C(l), _ = (f) => t("update:modelValue", f.target.value);
     return (f, x) => {
-      const _ = y("InputLabel"), E = y("FormMessages");
+      const b = y("InputLabel"), E = y("FormMessages");
       return r(), u("div", {
         id: n(a),
         class: c(n(i))
       }, [
-        b(_, {
+        I(b, {
           id: n(s),
           label: n(h),
           required: e.required
@@ -478,15 +479,15 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
             placeholder: e.placeholder,
             required: e.required,
             readonly: e.readonly,
-            onInput: I
-          }, null, 42, _e),
-          e.description ? (r(), u("i", Te, v(e.description), 1)) : $("", !0),
-          b(E, { messages: e.messages }, null, 8, ["messages"])
+            onInput: _
+          }, null, 42, Ie),
+          e.description ? (r(), u("i", be, v(e.description), 1)) : T("", !0),
+          I(E, { messages: e.messages }, null, 8, ["messages"])
         ], 2)
-      ], 10, be);
+      ], 10, _e);
     };
   }
-}), $e = ["id"], Ee = ["id", "type", "name", "placeholder", "readonly", "required", "value"], ke = { key: 0 }, He = /* @__PURE__ */ m({
+}), $e = ["id"], Te = ["id", "type", "name", "placeholder", "readonly", "required", "value"], Ee = { key: 0 }, Ye = /* @__PURE__ */ m({
   __name: "TextInput",
   props: {
     type: { default: "text" },
@@ -502,14 +503,14 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
   },
   emits: ["update:modelValue"],
   setup(e, { emit: t }) {
-    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = B(l), I = (f) => t("update:modelValue", f.target.value);
+    const l = e, { elementId: a, inputId: s, elementClasses: i, innerClasses: d, inputClasses: o, labelText: h } = C(l), _ = (f) => t("update:modelValue", f.target.value);
     return (f, x) => {
-      const _ = y("InputLabel"), E = y("FormMessages");
+      const b = y("InputLabel"), E = y("FormMessages");
       return r(), u("div", {
         id: n(a),
         class: c(n(i))
       }, [
-        b(_, {
+        I(b, {
           id: n(s),
           label: n(h),
           required: e.required
@@ -526,15 +527,15 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
             readonly: e.readonly,
             required: e.required,
             value: e.modelValue,
-            onInput: I
-          }, null, 42, Ee),
-          e.description ? (r(), u("i", ke, v(e.description), 1)) : $("", !0),
-          b(E, { messages: e.messages }, null, 8, ["messages"])
+            onInput: _
+          }, null, 42, Te),
+          e.description ? (r(), u("i", Ee, v(e.description), 1)) : T("", !0),
+          I(E, { messages: e.messages }, null, 8, ["messages"])
         ], 2)
       ], 10, $e);
     };
   }
-}), Be = ["src"], Ke = /* @__PURE__ */ m({
+}), ke = ["src"], He = /* @__PURE__ */ m({
   __name: "BaseImage",
   props: {
     src: null,
@@ -547,11 +548,11 @@ const Z = ["id"], j = ["for"], Q = { class: "label-content" }, ee = {
       height: t.height || t.size,
       width: t.width || t.size
     }));
-    return (a, s) => (r(), u("img", D({ class: "app-image block" }, n(l), { src: e.src }), null, 16, Be));
+    return (a, s) => (r(), u("img", A({ class: "app-image block" }, n(l), { src: e.src }), null, 16, ke));
   }
 });
-function xe(e) {
-  const t = C(null), l = C(!1), a = () => {
+function Ce(e) {
+  const t = B(null), l = B(!1), a = () => {
     t.value = new IntersectionObserver((i) => {
       i[0].isIntersecting && (l.value = !0, s());
     }), t.value.observe(e.value);
@@ -566,7 +567,7 @@ function xe(e) {
     unobserve: s
   };
 }
-const Ce = ["src"], We = /* @__PURE__ */ m({
+const xe = ["src"], Ke = /* @__PURE__ */ m({
   __name: "BaseIntersectionImage",
   props: {
     src: null,
@@ -575,17 +576,17 @@ const Ce = ["src"], We = /* @__PURE__ */ m({
     width: null
   },
   setup(e) {
-    const t = e, l = C(null), { intersected: a, observe: s, unobserve: i } = xe(l), d = p(() => a.value ? t.src : ""), o = p(() => ({
+    const t = e, l = B(null), { intersected: a, observe: s, unobserve: i } = Ce(l), d = p(() => a.value ? t.src : ""), o = p(() => ({
       height: t.height || t.size,
       width: t.width || t.size
     }));
-    return X(() => s()), Y(() => i()), (h, I) => (r(), u("img", D({
+    return z(() => s()), G(() => i()), (h, _) => (r(), u("img", A({
       ref_key: "image",
       ref: l,
       class: ["app-image block", { intersected: n(a) }]
-    }, n(o), { src: n(d) }), null, 16, Ce));
+    }, n(o), { src: n(d) }), null, 16, xe));
   }
-}), Ne = ["href", "target", "rel"], Je = /* @__PURE__ */ m({
+}), Be = ["href", "target", "rel"], We = /* @__PURE__ */ m({
   __name: "BaseExternalLink",
   props: {
     href: null,
@@ -596,16 +597,16 @@ const Ce = ["src"], We = /* @__PURE__ */ m({
   setup(e) {
     return (t, l) => (r(), u("a", {
       href: e.href,
-      class: c(n(T).BASE_EXTERNAL_LINK),
+      class: c(n($).BASE_EXTERNAL_LINK),
       target: e.target,
       rel: e.rel
     }, [
       k(t.$slots, "default", {}, () => [
         w(v(e.text), 1)
       ])
-    ], 10, Ne));
+    ], 10, Be));
   }
-}), Ze = /* @__PURE__ */ m({
+}), Je = /* @__PURE__ */ m({
   __name: "BaseLink",
   props: {
     text: { default: void 0 },
@@ -616,7 +617,7 @@ const Ce = ["src"], We = /* @__PURE__ */ m({
       const a = y("RouterLink");
       return r(), S(a, {
         to: e.to,
-        class: c(n(T).BASE_LINK)
+        class: c(n($).BASE_LINK)
       }, {
         default: q(() => [
           k(t.$slots, "default", {}, () => [
@@ -628,7 +629,7 @@ const Ce = ["src"], We = /* @__PURE__ */ m({
     };
   }
 });
-function Se() {
+function Ne() {
   return {
     setCookie: (a, s, i = 30) => {
       let d = "";
@@ -654,45 +655,38 @@ function Se() {
     }
   };
 }
-const U = "phpfyi_settings";
-function je() {
-  const { getCookie: e, setCookie: t } = Se();
-  let l = P({
-    preferences: !1,
-    marketing: !1,
-    statistics: !1
-  });
-  const a = C(!0), s = () => {
-    const o = i();
-    o ? l = P(o) : a.value = !1;
-  }, i = () => {
-    const o = String(e(U));
-    return o ? JSON.parse(o) : null;
-  };
+function Ze(e = "app_settings") {
+  const { getCookie: t, setCookie: l } = Ne(), a = B(null);
   return {
-    consent: l,
-    consentLogged: a,
-    bootConsent: s,
-    getConsentCookie: i,
+    consentCookie: a,
+    createConsent: () => X({
+      preferences: !1,
+      marketing: !1,
+      statistics: !1
+    }),
+    getConsentCookie: () => {
+      const o = String(t(e));
+      return a.value = o ? JSON.parse(o) : null;
+    },
     setConsentCookie: (o) => {
-      t(U, JSON.stringify(o)), a.value = !0;
+      l(e, JSON.stringify(o)), a.value = o;
     }
   };
 }
-const F = {
+const M = {
   DEVELOPMENT: "development",
   PRODUCTION: "production"
 };
-function Qe() {
+function je() {
   const e = (s) => process.env.NODE_ENV === s;
   return {
     isEnv: e,
-    isDev: () => e(F.DEVELOPMENT),
-    isProd: () => e(F.PRODUCTION),
+    isDev: () => e(M.DEVELOPMENT),
+    isProd: () => e(M.PRODUCTION),
     isSSR: () => typeof window > "u"
   };
 }
-function et() {
+function Qe() {
   return {
     bootGoogleTagManager: () => {
       window.dataLayer = window.dataLayer || [];
@@ -709,8 +703,8 @@ function et() {
     }
   };
 }
-function tt() {
-  const e = C(!1), t = () => window.addEventListener("scroll", l), l = () => {
+function et() {
+  const e = B(!1), t = () => window.addEventListener("scroll", l), l = () => {
     e.value = window.scrollY > 100;
   }, a = (d = 0) => {
     window.scrollTo({
@@ -725,7 +719,7 @@ function tt() {
     scrollTo: a,
     scrollToElement: (d, o = 0) => {
       const h = document.querySelector(d);
-      h && M(() => {
+      h && P(() => {
         setTimeout(() => {
           a(h.getBoundingClientRect().top + window.scrollY - o);
         }, 0);
@@ -733,7 +727,7 @@ function tt() {
     },
     scrollIntoView: (d) => {
       const o = document.querySelector(d);
-      o && M(() => {
+      o && P(() => {
         setTimeout(() => {
           o.scrollIntoView({ behavior: "smooth" });
         }, 0);
@@ -742,31 +736,31 @@ function tt() {
   };
 }
 export {
-  Je as BaseExternalLink,
-  Me as BaseHeading,
-  Ke as BaseImage,
-  We as BaseIntersectionImage,
-  Ze as BaseLink,
-  Ue as BaseText,
+  We as BaseExternalLink,
+  Pe as BaseHeading,
+  He as BaseImage,
+  Ke as BaseIntersectionImage,
+  Je as BaseLink,
+  Me as BaseText,
   Fe as CheckboxInput,
-  Oe as EmailInput,
-  Ae as FormBase,
-  Re as FormMessages,
-  De as InputLabel,
-  we as PerspectivePlane,
-  Le as PerspectiveWrapper,
-  ze as PhoneNumberInput,
-  Ge as SelectInput,
-  Ve as SlantWrapper,
-  Xe as SubmitInput,
-  He as TextInput,
-  Ye as TextareaInput,
-  Pe as TransitionFade,
-  je as useConsent,
-  Se as useCookie,
-  Qe as useEnvironment,
-  B as useFormInput,
-  et as useGoogleTagManager,
-  xe as useIntersectionObserver,
-  tt as useScroll
+  Ue as EmailInput,
+  Oe as FormBase,
+  Ae as FormMessages,
+  Re as InputLabel,
+  qe as PerspectivePlane,
+  we as PerspectiveWrapper,
+  De as PhoneNumberInput,
+  ze as SelectInput,
+  Le as SlantWrapper,
+  Ge as SubmitInput,
+  Ye as TextInput,
+  Xe as TextareaInput,
+  Ve as TransitionFade,
+  Ze as useConsent,
+  Ne as useCookie,
+  je as useEnvironment,
+  C as useFormInput,
+  Qe as useGoogleTagManager,
+  Ce as useIntersectionObserver,
+  et as useScroll
 };
