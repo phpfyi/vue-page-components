@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'lib/main.ts'),
+      entry: resolve(__dirname, 'bundles/main.ts'),
       name: 'Vue Page Components',
       // the proper extensions will be added
       fileName: 'main'
