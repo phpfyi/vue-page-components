@@ -17,7 +17,7 @@ import {
   SubmitInput,
   TextareaInput,
   TextInput,
-} from '../bundles/main
+} from '../bundles/main'
 
 const plugin = {
   install (app: App) {
