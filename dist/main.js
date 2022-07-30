@@ -651,6 +651,7 @@ function Ne() {
   return {
     setCookie: t,
     getCookie: e,
+    parseCookie: l,
     deleteCookie: (a) => {
       document.cookie = a + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
     }

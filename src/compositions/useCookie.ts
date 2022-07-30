@@ -25,6 +25,7 @@ export function useCookie() {
     return {
         setCookie,
         getCookie,
+        parseCookie,
         deleteCookie,
     }
 }
