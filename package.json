@@ -24,7 +24,8 @@
     "dist",
     "lib",
     "src/constants",
-    "src/types"
+    "src/types",
+    "src/@types"
   ],
   "types": "./src/@types/component.d.ts",
   "main": "./dist/my-lib.umd.cjs",
