@@ -1,4 +1,4 @@
-import { VueConstructor } from "vue";
+import { Ref, VueConstructor } from "vue";
 
 export const PerspectivePlane: VueConstructor;
 export const PerspectiveWrapper: VueConstructor;
@@ -24,3 +24,11 @@ export const BaseIntersectionImage: VueConstructor
 
 export const BaseExternalLink: VueConstructor
 export const BaseLink: VueConstructor
+
+export const useConsent: () => {
+    consent: import("../types/Consent").Cookie,
+    consentLogged: Ref<boolean>,
+    bootConsent: () => void,
+    getConsentCookie: () => Consent.Cookie | null,
+    setConsentCookie: (consent: Consent.Cookie | null) => void,
+}

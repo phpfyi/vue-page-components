@@ -20,6 +20,15 @@
     "vite": "^3.0.0",
     "vue-tsc": "^0.38.4"
   },
+  "types": "./src/@types/index.d.ts",
+  "main": "./dist/main.umd.cjs",
+  "module": "./dist/main.js",
+  "exports": {
+    ".": {
+      "import": "./dist/main.js",
+      "require": "./dist/main.umd.cjs"
+    }
+  },
   "files": [
     "dist",
     "lib",
@@ -27,24 +36,15 @@
     "src/types",
     "src/@types"
   ],
-  "types": "./src/@types/component.d.ts",
-  "main": "./dist/my-lib.umd.cjs",
-  "module": "./dist/my-lib.js",
-  "exports": {
-    ".": {
-      "import": "./dist/main.js",
-      "require": "./dist/main.cjs"
-    }
-  },
+  "author": "Andrew Mc Cormack",
+  "license": "ISC",
+  "keywords": [
+    "vue"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phpfyi/vue-page-components.git"
   },
-  "keywords": [
-    "vue"
-  ],
-  "author": "Andrew Mc Cormack",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/phpfyi/vue-page-components/issues"
   },

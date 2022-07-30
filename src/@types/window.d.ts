@@ -2,6 +2,9 @@ export {}
 
 declare global {
     interface Window {
-        dataLayer: Record<string, unknown, 'push'>
+        dataLayer: {
+            push: (data: Record<string, unknown>) => void
+            [key: string]: string
+        }
     }
 }
