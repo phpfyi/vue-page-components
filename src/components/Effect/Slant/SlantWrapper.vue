@@ -34,12 +34,15 @@ const classes = computed(() => {
 
 <style lang="scss" scoped>
 .slant-wrapper {
+    left: -10px;
+    right: -10px;
+    position: absolute;
     width: 120%;
-    @include position-absolute(1, auto, -10%, auto, -10%);
-    @include rotate(-2deg);
+    z-index: 1;
+    transform: rotate(-2deg);
 
     &-reverse {
-        @include rotate(2deg);
+        transform: rotate(2deg);
     }
 }
 </style>

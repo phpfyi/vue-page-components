@@ -1,4 +1,5 @@
-import { Environment, ENVIRONMENTS } from '../constants/Environment'
+import { ENVIRONMENTS } from '../constants/Environment'
+import { Environment } from '../types/Environment'
 
 export function useEnvironment() {
     const isEnv = (environment: Environment): boolean => process.env.NODE_ENV === environment

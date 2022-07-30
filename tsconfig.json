@@ -1,48 +1,38 @@
 {
   "compilerOptions": {
+    "strict": true,
     "target": "esnext",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "module": "ESNext",
     "rootDir": "./",
-    "outDir": "build",
-    "strict": true,
+    "outDir": "dist",
     "jsx": "preserve",
-    "importHelpers": true,
     "moduleResolution": "node",
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "typeRoots": [
-      "node_modules/@types",
-      "src/@types"
-    ],
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "tests/**/*.tsx",
+    "vite-env.d.ts"  
+],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
