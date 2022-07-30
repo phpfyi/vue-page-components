@@ -17,6 +17,7 @@ export function useIntersectionObserver(element: Ref<Element | null>) {
     const unobserve = () => observer.value?.disconnect()
     
     return {
+        observer,
         intersected,
         observe,
         unobserve

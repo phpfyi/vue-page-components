@@ -1,4 +1,4 @@
-import { Ref, VueConstructor } from "vue";
+import { Computed, Ref, VueConstructor } from "vue";
 
 export const PerspectivePlane: VueConstructor;
 export const PerspectiveWrapper: VueConstructor;
@@ -31,4 +31,49 @@ export const useConsent: () => {
     bootConsent: () => void,
     getConsentCookie: () => Consent.Cookie | null,
     setConsentCookie: (consent: Consent.Cookie | null) => void,
+}
+
+export const useCookie: () => {
+    setCookie: (name: string, value: string, days = 30) => void,
+    getCookie: (name: string) => null | string,
+    deleteCookie: (name: string) => void
+}
+
+export const useEnvironment: () => {
+    isEnv: (environment: Environment) => boolean
+    isDev: () => boolean
+    isProd: () => boolean
+    isSSR: () => boolean 
+}
+
+export const useFormInput: () => {
+    elementId: Computed<string>
+    inputId: Computed<string>
+    elementClasses: Computed<Array<string>>
+    innerClasses: Computed<Array<string>>
+    inputClasses: Computed<Array<string>>
+    labelText: Computed<string | boolean>
+}
+
+export const useGoogleTagManager: () => {
+    bootGoogleTagManager: () => void
+    pushData: (data: Record<string,unknown>) => void 
+    trackPage: (path: string, title: string) => void
+}
+
+export const useIntersectionObserver: () => {
+    observer: Ref<IntersectionObserver | null>
+    intersected: Ref<false>
+    observe: () => void
+    unobserve: () => void
+}
+
+
+export const useScroll: () => {
+    scrolled: Ref<boolean> 
+    bootScroll: () => void
+    onScroll: () => void
+    scrollTo: (top: number = 0) => void
+    scrollToElement: (selector: string, offset: number = 0) => void
+    scrollIntoView: (selector: string) => void
 }
