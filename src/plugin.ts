@@ -1,24 +1,23 @@
 import { App } from 'vue'
 
-import BaseHeading from './components/Font/BaseHeading.vue'
-import BaseText from './components/Font/BaseText.vue'
-
-import BaseImage from './components/Image/BaseImage.vue'
-import BaseIntersectionImage from './components/Image/BaseIntersectionImage.vue'
-
-import BaseExternalLink from './components/Link/BaseExternalLink.vue'
-import BaseLink from './components/Link/BaseLink.vue'
-
-import CheckboxInput from './components/Form/CheckboxInput.vue'
-import FormBase from './components/Form/FormBase.vue'
-import FormMessages from './components/Form/FormMessages.vue'
-import EmailInput from './components/Form/EmailInput.vue'
-import InputLabel from './components/Form/InputLabel.vue'
-import PhoneNumberInput from './components/Form/PhoneNumberInput.vue'
-import SelectInput from './components/Form/SelectInput.vue'
-import SubmitInput from './components/Form/SubmitInput.vue'
-import TextareaInput from './components/Form/TextareaInput.vue'
-import TextInput from './components/Form/TextInput.vue'
+import {
+  BaseHeading,
+  BaseText,
+  BaseImage,
+  BaseIntersectionImage,
+  BaseExternalLink,
+  BaseLink,
+  CheckboxInput,
+  FormBase,
+  FormMessages,
+  EmailInput,
+  InputLabel,
+  PhoneNumberInput,
+  SelectInput,
+  SubmitInput,
+  TextareaInput,
+  TextInput,
+} from '../bundles/main
 
 const plugin = {
   install (app: App) {
@@ -32,13 +31,10 @@ const plugin = {
     */
     app.component('BaseHeading', BaseHeading)
     app.component('BaseText', BaseText)
-
     app.component('BaseImage', BaseImage)
     app.component('BaseIntersectionImage', BaseIntersectionImage)
-
     app.component('BaseExternalLink', BaseExternalLink)
     app.component('BaseLink', BaseLink)
-
     app.component('CheckboxInput', CheckboxInput)
     app.component('FormBase', FormBase)
     app.component('FormMessages', FormMessages)

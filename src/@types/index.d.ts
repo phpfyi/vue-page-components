@@ -1,4 +1,4 @@
-import { Computed, Ref, VueConstructor } from "vue";
+import { Computed, Ref, VueConstructor } from "vue"; // @todo DefineComponent instead of VueConstructor
 
 export const PerspectivePlane: VueConstructor;
 export const PerspectiveWrapper: VueConstructor;
@@ -29,18 +29,18 @@ export const useConsent: () => {
     consent: import("../types/Consent").Cookie,
     consentLogged: Ref<boolean>,
     bootConsent: () => void,
-    getConsentCookie: () => Consent.Cookie | null,
-    setConsentCookie: (consent: Consent.Cookie | null) => void,
+    getConsentCookie: () => import("../types/Consent").Cookie | null,
+    setConsentCookie: (consent: import("../types/Consent").Cookie | null) => void,
 }
 
 export const useCookie: () => {
-    setCookie: (name: string, value: string, days = 30) => void,
+    setCookie: (name: string, value: string, days: number) => void,
     getCookie: (name: string) => null | string,
     deleteCookie: (name: string) => void
 }
 
 export const useEnvironment: () => {
-    isEnv: (environment: Environment) => boolean
+    isEnv: (environment: import("../types/Environment").Environment) => boolean
     isDev: () => boolean
     isProd: () => boolean
     isSSR: () => boolean 
@@ -68,12 +68,11 @@ export const useIntersectionObserver: () => {
     unobserve: () => void
 }
 
-
 export const useScroll: () => {
     scrolled: Ref<boolean> 
     bootScroll: () => void
     onScroll: () => void
-    scrollTo: (top: number = 0) => void
-    scrollToElement: (selector: string, offset: number = 0) => void
+    scrollTo: (top: number) => void
+    scrollToElement: (selector: string, offset: number) => void
     scrollIntoView: (selector: string) => void
 }
