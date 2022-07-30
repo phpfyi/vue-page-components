@@ -32,13 +32,3 @@ export { useFormInput } from '../src/compositions/useFormInput';
 export { useGoogleTagManager } from '../src/compositions/useGoogleTagManager';
 export { useIntersectionObserver } from '../src/compositions/useIntersectionObserver';
 export { useScroll } from '../src/compositions/useScroll';
-
-// constants
-export { CLASSES, PREFIXES } from '../src/constants/Classes';
-export { ENVIRONMENTS } from '../src/constants/Environment';
-
-// types
-export * as Consent from '../src/types/Consent';
-export * as Element from '../src/types/Element';
-export * as Environment from '../src/types/Environment';
-export * as Form from '../src/types/Form';
