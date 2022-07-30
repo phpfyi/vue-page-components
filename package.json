@@ -21,14 +21,15 @@
     "vue-tsc": "^0.38.4"
   },
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ],
   "main": "./dist/my-lib.umd.cjs",
   "module": "./dist/my-lib.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-page-components.js",
-      "require": "./dist/vue-page-components.cjs"
+      "import": "./dist/main.js",
+      "require": "./dist/main.cjs"
     }
   },
   "repository": {
