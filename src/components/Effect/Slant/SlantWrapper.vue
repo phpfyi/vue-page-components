@@ -31,18 +31,3 @@ const classes = computed(() => {
 <template>
     <div class="slant-wrapper" :class="classes" :style="styles" />
 </template>
-
-<style lang="scss" scoped>
-.slant-wrapper {
-    left: -10px;
-    right: -10px;
-    position: absolute;
-    width: 120%;
-    z-index: 1;
-    transform: rotate(-2deg);
-
-    &-reverse {
-        transform: rotate(2deg);
-    }
-}
-</style>

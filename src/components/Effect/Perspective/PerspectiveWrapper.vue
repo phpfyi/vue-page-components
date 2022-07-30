@@ -27,16 +27,3 @@ const styles = computed(() => {
         </div>
     </div>
 </template>
-
-<style lang="scss" scoped>
-.perspective {
-    margin: auto;
-    perspective: 1000px;
-
-    &__inner {
-        margin: 0 auto;
-        transform-style: preserve-3d;
-        transform: rotateX(-45deg) rotateY(30deg);
-    }
-}
-</style>

@@ -34,9 +34,3 @@ const styles = computed(() => {
         <slot />
     </div>
 </template>
-
-<style lang="scss" scoped>
-.perspective-plane {
-    position: absolute;
-}
-</style>
