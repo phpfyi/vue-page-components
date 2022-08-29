@@ -363,7 +363,7 @@ const J = ["id"], Z = ["for"], j = { class: "label-content" }, Q = {
   }
 }), pe = ["id"], ge = ["id", "value", "name", "required", "readonly"], he = {
   key: 0,
-  disabled: "",
+  selected: "",
   value: ""
 }, ve = ["value"], ze = /* @__PURE__ */ p({
   __name: "SelectInput",

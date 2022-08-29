@@ -58,7 +58,7 @@ const onChange = (e: Event) => emit('update:modelValue', (e.target as HTMLSelect
                 :readonly="readonly"
                 @input="onChange"
             >
-                <option v-if="emptyOption" disabled value="">
+                <option v-if="emptyOption" selected value="">
                     {{ emptyOption }}
                 </option>
                 <option v-for="(option, i) in options" :key="i" :value="option.value">
