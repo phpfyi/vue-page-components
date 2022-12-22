@@ -20,7 +20,6 @@ export const TextareaInput: VueConstructor
 export const TextInput: VueConstructor
 
 export const BaseImage: VueConstructor
-export const BaseIntersectionImage: VueConstructor
 
 export const BaseExternalLink: VueConstructor
 export const BaseLink: VueConstructor

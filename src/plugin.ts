@@ -4,7 +4,6 @@ import {
   BaseHeading,
   BaseText,
   BaseImage,
-  BaseIntersectionImage,
   BaseExternalLink,
   BaseLink,
   CheckboxInput,
@@ -32,7 +31,6 @@ const plugin = {
     app.component('BaseHeading', BaseHeading)
     app.component('BaseText', BaseText)
     app.component('BaseImage', BaseImage)
-    app.component('BaseIntersectionImage', BaseIntersectionImage)
     app.component('BaseExternalLink', BaseExternalLink)
     app.component('BaseLink', BaseLink)
     app.component('CheckboxInput', CheckboxInput)
