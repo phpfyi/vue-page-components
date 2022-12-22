@@ -19,6 +19,7 @@ export { default as TextareaInput } from '../src/components/Form/TextareaInput.v
 export { default as TextInput } from '../src/components/Form/TextInput.vue'
 
 export { default as BaseImage } from '../src/components/Image/BaseImage.vue'
+export { default as BaseIntersectionImage } from '../src/components/Image/BaseIntersectionImage.vue'
 
 export { default as BaseExternalLink } from '../src/components/Link/BaseExternalLink.vue'
 export { default as BaseLink } from '../src/components/Link/BaseLink.vue'

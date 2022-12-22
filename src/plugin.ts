@@ -4,6 +4,7 @@ import {
   BaseHeading,
   BaseText,
   BaseImage,
+  BaseIntersectionImage,
   BaseExternalLink,
   BaseLink,
   CheckboxInput,
