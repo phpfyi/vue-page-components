@@ -12,20 +12,20 @@ export function useScroll() {
     }
 
     // functions
-    const scrollTo = (top = 0) => {
+    const scrollTo = (top = 0, behavior: ScrollBehavior = 'auto') => {
         window.scrollTo({
             top: top,
             left: 0,
-            behavior: 'smooth',
+            behavior,
         })
     }
-    const scrollToElement = (selector: string, offset = 0) => {
+    const scrollToElement = (selector: string, offset = 0, behavior: ScrollBehavior = 'auto') => {
         const element = document.querySelector(selector) as Element
 
         if (element) {
             nextTick(() => {
                 setTimeout(() => {
-                    scrollTo(element.getBoundingClientRect().top + window.scrollY - offset)
+                    scrollTo(element.getBoundingClientRect().top + window.scrollY - offset, behavior)
                 }, 0)
             })
         }
