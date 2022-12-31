@@ -72,7 +72,7 @@ export const useScroll: () => {
     scrolled: Ref<boolean> 
     bootScroll: () => void
     onScroll: () => void
-    scrollTo: (top?: number) => void
-    scrollToElement: (selector: string, offset?: number) => void
+    scrollTo: (top?: number, behavior: ScrollBehavior) => void
+    scrollToElement: (selector: string, offset?: number, behavior: ScrollBehavior) => void
     scrollIntoView: (selector: string) => void
 }
