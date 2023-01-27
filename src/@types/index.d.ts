@@ -25,11 +25,6 @@ export const BaseIntersectionImage: VueConstructor
 export const BaseExternalLink: VueConstructor
 export const BaseLink: VueConstructor
 
-export const useAxios: () => {
-    fetch: (callback: (client: AxiosInstance) => Promise<unknown>) => Promise<Client.Response>
-    fetching: Ref<boolean>,
-}
-
 export const useConsent: (id: string) => {
     consentCookie: Ref<import("../types/Consent").Cookie | null>
     createConsent: () => import("../types/Consent").Cookie,
