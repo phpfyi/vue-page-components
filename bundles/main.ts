@@ -32,3 +32,4 @@ export { useFormInput } from '../src/compositions/useFormInput';
 export { useGoogleTagManager } from '../src/compositions/useGoogleTagManager';
 export { useIntersectionObserver } from '../src/compositions/useIntersectionObserver';
 export { useScroll } from '../src/compositions/useScroll';
+export { useTime } from '../src/compositions/useTime';

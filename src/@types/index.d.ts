@@ -76,3 +76,10 @@ export const useScroll: () => {
     scrollToElement: (selector: string, offset?: number, behavior?: ScrollBehavior) => void
     scrollIntoView: (selector: string) => void
 }
+
+export const useTime: () => {
+    microtime: () => number,
+    currentYear: () => number,
+    currentHour: () => number,
+    timestamp: () => string
+}
