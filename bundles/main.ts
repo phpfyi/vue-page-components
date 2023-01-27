@@ -25,8 +25,10 @@ export { default as BaseExternalLink } from '../src/components/Link/BaseExternal
 export { default as BaseLink } from '../src/components/Link/BaseLink.vue'
 
 // compositions
+export { useAxios } from '../src/compositions/useAxios';
 export { useConsent } from '../src/compositions/useConsent';
 export { useCookie } from '../src/compositions/useCookie';
+export { useDOM } from '../src/compositions/useDOM';
 export { useEnvironment } from '../src/compositions/useEnvironment';
 export { useFormInput } from '../src/compositions/useFormInput';
 export { useGoogleTagManager } from '../src/compositions/useGoogleTagManager';
