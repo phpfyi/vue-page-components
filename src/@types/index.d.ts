@@ -61,7 +61,7 @@ export const useGoogleTagManager: () => {
     trackPage: (path: string, title: string) => void
 }
 
-export const useIntersectionObserver: () => {
+export const useIntersectionObserver: (element: Ref<Element | null>) => {
     observer: Ref<IntersectionObserver | null>
     intersected: Ref<false>
     observe: () => void
